@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTMX Items List</title>
+    <script src="https://unpkg.com/htmx.org" defer></script>
+</head>
+<body>
+    <h1>Items List</h1>
+    <div id="itemList">
+    </div>
+    <form hx-post="/add-item" hx-target="#itemList" hx-swap="outerHTML">
+        <input type="text" name="itemName" placeholder="Add new item"/>
+        <button type="submit">Add Item</button>
+    </form>
+</body>
+</html>
+
